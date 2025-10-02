@@ -1,0 +1,26 @@
+{
+  "id": "festival_awaken",
+  "chapter": 1,
+  "title": "Festival Awakening",
+  "text": [
+    "The town square glows with lanterns. Hana smiles and offers you a small charm.",
+    "You sense a faint ripple in time — a Chronosense pulse stirs."
+  ],
+  "choices": [
+    {
+      "id": "take_charm",
+      "text": "Accept the charm graciously.",
+      "effects": {
+        "add_seed": "S05",
+        "relationship": {"Hana": 1}
+      }
+    },
+    {
+      "id": "decline_charm",
+      "text": "Politely refuse — you have no need for such trinkets.",
+      "effects": {
+        "relationship": {"Hana": -1}
+      }
+    }
+  ]
+}
