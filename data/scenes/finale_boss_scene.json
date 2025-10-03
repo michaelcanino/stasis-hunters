@@ -5,8 +5,7 @@
   "choices": [
     {
       "label": "Fight!",
-      "action": "encounter_boss",
-      "boss_id": "ENGINE_HEART",
+      "effects": { "encounter_monster": "M_EngineHeartBoss" },
       "goto": "post_boss_scene"
     }
   ]

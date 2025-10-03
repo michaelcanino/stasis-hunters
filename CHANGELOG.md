@@ -2,6 +2,26 @@
 
 ## [Unreleased] - 2025-10-03
 ### Added
+- Implemented core Phase 3 glue:
+  - Relationship manager completed (auto romance flagging on affinity thresholds).
+  - Backwards-compatible boss encounter mapping (legacy `action: "encounter_boss"` -> `encounter_monster` effects).
+  - Added placeholder romance scenes for Kai, Mira, and Ayaka (data/scenes/*) to match the JRPG seed/payoff template.
+- `data/chapters.json` validated for CH01→CH13 canonical flow; Chronosense and Tech Pulse fields present per chapter.
+- Seeds and payoffs: S22 and S23 (MidReliquary and Engine Heart) present; payoff P01 requires S22+S23.
+
+### Fixed
+- Relationship manager function implemented (previously a placeholder). Romances now set/cleared on threshold crossing.
+- Boss fight scene mapping fixed so Engine Heart and Reliquary boss scenes trigger the monster/boss engine.
+
+### Notes / Remaining
+- Festival multi-romance punishment (rebuild cost enforcement) provided as a suggested enforcement snippet; recommend wiring into festival scenes for full enforcement and adding unit/QA tests (see `project_outline.md` Phase 3 QA checklist).
+- Further polish: fully write out romance-specific payoffs and epilogues for Kai/Mira/Ayaka, and add QA tests for payoffs and chronicle mirroring.
+
+
+
+
+## [Unreleased] - 2025-10-03
+### Added
 - Phase 3 content fill: canonical `data/chapters.json` with scene IDs for CH01→CH13.
 - Scene templates added in `data/scenes/` for each chapter; festival scene updated to `festival_awaken`.
 - Chronosense / Tech Pulse settings added per chapter to support per-chapter mechanics.
