@@ -1,46 +1,20 @@
-{
-  "S05": {
+[
+  {
     "id": "S05",
-    "payoff": "P02",
-    "desc": "Small shrine charm Hana gives Aki at the festival",
-    "type": "item",
-    "location": "Festival Awakening",
-    "chapter": 1,
-    "discover_method": "pickup",
-    "essential_for_payoff": true,
-    "mirror_on_pickup": true
-  },
-  "S21": {
-    "id": "S21",
-    "payoff": "RomancePunish",
-    "desc": "Festival aftermath gossip note about multiple romances",
-    "type": "event",
-    "location": "Festival Aftermath",
-    "chapter": 1,
-    "discover_method": "choice consequence",
+    "desc": "A festival token with an etched constellation.",
     "essential_for_payoff": false,
-    "mirror_on_pickup": false
+    "mirror_on_pickup": true
   },
-  "S22": {
+  {
     "id": "S22",
-    "payoff": "P01",
-    "desc": "Reliquary core fragment with partial board signatures",
-    "type": "item",
-    "location": "Reliquary Vault",
-    "chapter": 12,
-    "discover_method": "boss_drop",
+    "desc": "A rusted cog bearing the company crest.",
     "essential_for_payoff": true,
     "mirror_on_pickup": true
   },
-  "S23": {
+  {
     "id": "S23",
-    "payoff": "P01",
-    "desc": "Engine Heart — the core power source of the Reliquary",
-    "type": "item",
-    "location": "Reliquary Depths",
-    "chapter": 11,
-    "discover_method": "boss_drop",
+    "desc": "A shard of the Engine Heart's casing.",
     "essential_for_payoff": true,
     "mirror_on_pickup": true
   }
-}
+]
