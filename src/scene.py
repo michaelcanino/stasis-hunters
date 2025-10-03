@@ -68,3 +68,49 @@ class Scene:
                 print(f"[Mini-game] Fail — wrong answer. ({elapsed:.2f}s)")
         except:
             print(f"[Mini-game] Fail — invalid input. ({elapsed:.2f}s)")
+
+    def apply_effects(self, effects: dict, player, payoff_manager=None, relationship_manager=None, memory_manager=None, monsters_index=None):
+        """
+        Apply declarative 'effects' from scene JSON.
+        Supported keys (minimal Phase2): add_seed, relationship, encounter_monster, memory_cost_preview
+        """
+        if not effects:
+            return
+
+        # add seed (expects seed_id string)
+        sid = effects.get("add_seed")
+        if sid:
+            seed = self.seeds_index.get(sid)
+            if seed:
+                player.add_seed(seed)
+                # check payoffs if manager present
+                if payoff_manager:
+                    payoff_manager.check_and_trigger(player)
+
+        # relationship adjustments: {"Hana": 1}
+        rel = effects.get("relationship")
+        if rel and relationship_manager:
+            for name, delta in rel.items():
+                relationship_manager.change_affinity(name, delta)
+                # also persist to player.relationships for compatibility
+                player.relationships[name] = relationship_manager.affinities.get(name, 0)
+
+        # encounter monster: expects monster id string
+        mid = effects.get("encounter_monster")
+        if mid and monsters_index:
+            mdata = monsters_index.get(mid)
+            if mdata:
+                from .monster import Monster
+                m = Monster(mdata)
+                drops = m.fight(player)
+                # apply drops to player inventory
+                for d in drops:
+                    s = self.seeds_index.get(d)
+                    if s:
+                        player.add_seed(s)
+                        if payoff_manager:
+                            payoff_manager.check_and_trigger(player)
+
+        # Memory cost preview/apply (very simple toggle)
+        if effects.get("memory_cost_preview") and memory_manager:
+            memory_manager.preview_removable()

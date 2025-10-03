@@ -8,6 +8,8 @@ class Player:
         self.inventory: List[Dict] = []      # list of seed dicts (id, desc, ...)
         self.relationships = {}
         self.chronicle = Chronicle()
+        self.flags = {}   # storage for arbitrary flags (e.g. triggered payoffs)
+
 
     def add_seed(self, seed):
         # seed: dict with id, desc, essential_for_payoff, mirror_on_pickup

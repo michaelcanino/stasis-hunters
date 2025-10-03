@@ -1,30 +1,34 @@
 
 ---
 
-# `CHANGELOG.md`
+### CHANGELOG.md (updated contents)
+
 ```markdown
 # Changelog
 
-All notable changes to this project will be documented here. This project uses [Semantic Versioning](https://semver.org/) style notes.
+## [Unreleased]
+- Phase 3 roadmap: combat refinement, advanced payoff chaining, UI/TUI experiments
 
-## Unreleased
-- (No changes yet.)
+## [0.2.0] - 2025-10-03
+### Added
+- Richer CLI in `src/game.py`
+  - Breadcrumb header
+  - Status bar showing player state
+  - Toast messages for feedback
+  - Confirm prompts for saves/memory removal
+  - Cleaner pagination and menus
+- Documentation updates: README expanded with walkthrough and UX notes
 
----
+### Changed
+- `game.py` fully wired into Phase 2 systems (payoffs, relationships, memory costs, monster encounters)
+- Save system now warns before overwriting
 
-## v0.1.0 — 2025-10-03
-Initial Phase 1 — MVP implementation (console prototype).
-- Added console navigation: Chapter → Scene → Choice.
-- Implemented inventory system and `Chronicle` (mirrors essential/flagged seeds).
-- Implemented Anchor mini-game (timed quick puzzle with Perfect / Partial / Fail outcomes).
-- Implemented save/load system writing `saves/save.json` with:
-  - `player.inventory`
-  - `chronicle_entries`
-- Added example data files: `data/seeds.json` and `data/scenes.json`.
-- Basic playtest instructions added to `README.md`.
+### Fixed
+- Defensive fallbacks if `Player` or `Scene` modules are missing
+- Safer loading of seeds, scenes, monsters
 
----
-
-## Notes
-- v0.1.0 is intended as the first playable milestone for design verification and playtesting.
-- Future versions will focus on branching narrative support, richer mini-games, and UI improvements.
+## [0.1.0] - Initial release
+### Added
+- Basic project scaffolding
+- Seed/scene data loading
+- Minimal player and save/load system
