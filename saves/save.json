@@ -1,0 +1,36 @@
+{
+  "protected_payload": {
+    "player": {
+      "name": "Player",
+      "inventory": [
+        {
+          "id": "S05",
+          "desc": "A festival token with an etched constellation."
+        },
+        {
+          "id": "S22",
+          "desc": "A rusted cog bearing the company crest."
+        },
+        {
+          "id": "S99",
+          "desc": "A curious lab token, probably worthless and thus interesting."
+        }
+      ],
+      "relationships": {}
+    },
+    "chronicle_entries": [
+      {
+        "id": "S05",
+        "desc": "A festival token with an etched constellation."
+      },
+      {
+        "id": "S22",
+        "desc": "A rusted cog bearing the company crest."
+      }
+    ]
+  },
+  "signature": "b3896fb39084ede43b3858943a3019f68537d63c46519768c65aa3db9b6a754d",
+  "extra": {
+    "test_run": true
+  }
+}

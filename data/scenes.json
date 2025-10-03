@@ -1,0 +1,56 @@
+[
+  {
+    "id": "festival",
+    "title": "Festival Awakening",
+    "desc": "The town square buzzes with lanterns and vendors. There's a booth emitting a soft hum.",
+    "choices": [
+      {
+        "label": "Inspect the humming booth (pick up optional seed S05)",
+        "action": "pickup_seed",
+        "seed_id": "S05"
+      },
+      {
+        "label": "Try the Anchor mini-game (quick puzzle)",
+        "action": "anchor_minigame"
+      }
+    ]
+  },
+  {
+    "id": "relic_cave",
+    "title": "Reliquary Cavern",
+    "desc": "A dug-out reliquary. Deep within you sense a guarded artifact.",
+    "choices": [
+      {
+        "label": "Search the chamber (may drop essential seed S22)",
+        "action": "pickup_seed",
+        "seed_id": "S22"
+      },
+      {
+        "label": "Search deeper (may reveal S23)",
+        "action": "pickup_seed",
+        "seed_id": "S23"
+      },
+      {
+        "label": "Attempt Anchor mini-game (to open sealed vault)",
+        "action": "anchor_minigame"
+      }
+    ]
+  },
+  {
+    "id": "abandoned_lab",
+    "title": "Abandoned Laboratory",
+    "desc": "Dusty instruments line a ruined bench. A faint glow from a cracked display draws your eye.",
+    "choices": [
+      {
+        "label": "Inspect the workbench (find an odd token S99)",
+        "action": "pickup_seed",
+        "seed_id": "S99"
+      },
+      {
+        "label": "Read the old log (text)",
+        "action": "text",
+        "text": "The log describes an experiment that stalled at the moment of 'mirroring.'"
+      }
+    ]
+  }
+]
