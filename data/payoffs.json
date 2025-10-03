@@ -1,0 +1,23 @@
+{
+  "P01": {
+    "id": "P01",
+    "title": "Corporate Corruption Exposed",
+    "required_seeds": ["S22", "S23"],
+    "canonical": true,
+    "chapter_trigger": 13
+  },
+  "P02": {
+    "id": "P02",
+    "title": "Festival Bond",
+    "required_seeds": ["S05"],
+    "canonical": false,
+    "chapter_trigger": 2
+  },
+  "RomancePunish": {
+    "id": "RomancePunish",
+    "title": "Festival Gossip — Reputation Hit",
+    "required_seeds": ["S21"],
+    "canonical": false,
+    "chapter_trigger": 2
+  }
+}

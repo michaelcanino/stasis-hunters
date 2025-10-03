@@ -1,0 +1,23 @@
+{
+  "M_Wisps": {
+    "id": "M_Wisps",
+    "name": "Temporal Wisps",
+    "hp": 10,
+    "attack_pattern": ["drain", "flicker"],
+    "drops": []
+  },
+  "M_ReliquaryBoss": {
+    "id": "M_ReliquaryBoss",
+    "name": "Reliquary Core Guardian",
+    "hp": 120,
+    "attack_pattern": ["slam", "pulse", "enrage"],
+    "drops": ["S22"]
+  },
+  "M_EngineHeartBoss": {
+    "id": "M_EngineHeartBoss",
+    "name": "Reliquary Depths Guardian",
+    "hp": 150,
+    "attack_pattern": ["burn", "seal", "rupture"],
+    "drops": ["S23"]
+  }
+}
