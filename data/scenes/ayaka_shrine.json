@@ -1,0 +1,13 @@
+{
+  "id": "ayaka_shrine",
+  "chapter": 7,
+  "title": "Ayaka — Shrine Confidant",
+  "text": [
+    "Priestess Ayaka hums an old vow. She shares a ritual charm.",
+    "It feels like a subtle tether to the past."
+  ],
+  "choices": [
+    { "id": "accept", "text": "Accept the charm", "effects": { "relationship": { "Ayaka": 2 }, "add_seed": "S13" } },
+    { "id": "decline", "text": "Politely decline", "effects": { "relationship": { "Ayaka": -1 } } }
+  ]
+}

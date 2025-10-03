@@ -1,0 +1,13 @@
+{
+  "id": "kai_confession",
+  "chapter": 3,
+  "title": "Kai — Rooftop Confession",
+  "text": [
+    "Kai waits on the roof, wind and neon lights. He shares a memory of days before the Stasis.",
+    "You feel your bond deepen."
+  ],
+  "choices": [
+    { "id": "befriend", "text": "Listen and reply kindly", "effects": { "relationship": { "Kai": 2 }, "add_seed": "S11" } },
+    { "id": "dismiss",   "text": "Change the subject",        "effects": { "relationship": { "Kai": -1 } } }
+  ]
+}

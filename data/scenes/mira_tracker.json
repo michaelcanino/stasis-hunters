@@ -1,0 +1,13 @@
+{
+  "id": "mira_tracker",
+  "chapter": 4,
+  "title": "Mira — The Workshop Alley",
+  "text": [
+    "Mira tinkers with an anchor. She smiles when you help.",
+    "The two of you share a quiet joke about circuitry and fate."
+  ],
+  "choices": [
+    { "id": "help", "text": "Help her with the soldering", "effects": { "relationship": { "Mira": 2 }, "add_seed": "S12" } },
+    { "id": "rush", "text": "Leave in a hurry",             "effects": { "relationship": { "Mira": -1 } } }
+  ]
+}
