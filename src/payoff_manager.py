@@ -27,25 +27,18 @@ class PayoffManager:
         and add to player.flags['payoffs_triggered'].
         Returns list of triggered payoff dicts.
         """
-        triggered = player.flags.get("payoffs_triggered", [])
-        chronicle_ids = {e['id'] for e in player.chronicle.entries}
+        if player is None:
+            return []
+        triggered = set(player.flags.get("payoffs_triggered", []))
+        chronicle_ids = {e['id'] for e in getattr(player.chronicle, "entries", [])}
         newly_triggered = []
-        for pid, pdata in self.payoffs.items():
-            if pid in triggered:
-                continue
-            reqs = set(pdata.get("required_seeds", []))
-            if reqs.issubset(chronicle_ids):
-                print(f"[Payoff] Payoff unlocked: {pdata.get('title')} ({pid})")
-                triggered.append(pid)
-                newly_triggered.append(pdata)
-        player.flags["payoffs_triggered"] = triggered
+        for pid, payoff in (self.payoffs.items() if isinstance(self.payoffs, dict) else []):
+            required = set(payoff.get("required_seeds", []))
+            if required and required.issubset(chronicle_ids) and pid not in triggered:
+                # trigger payoff
+                triggered.add(pid)
+                newly_triggered.append(payoff)
+                print(f"[PayoffManager] Triggered payoff {pid}: {payoff.get('title')}")
+        # persist back to player flags
+        player.flags["payoffs_triggered"] = list(triggered)
         return newly_triggered
-
-    def list_locked(self, player) -> List[Dict]:
-        chronicle_ids = {e['id'] for e in player.chronicle.entries}
-        locked = []
-        for pid, pdata in self.payoffs.items():
-            reqs = set(pdata.get("required_seeds", []))
-            if not reqs.issubset(chronicle_ids):
-                locked.append({"id": pid, "title": pdata.get("title"), "missing": list(reqs - chronicle_ids)})
-        return locked

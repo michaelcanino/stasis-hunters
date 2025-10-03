@@ -1,6 +1,32 @@
 [
-  {"id": "S05", "desc": "A festival token with an etched constellation.", "essential_for_payoff": false, "mirror_on_pickup": true},
-  {"id": "S22", "desc": "A rusted cog bearing the company crest.", "essential_for_payoff": true, "mirror_on_pickup": true},
-  {"id": "S23", "desc": "A shard of the Engine Heart's casing.", "essential_for_payoff": true, "mirror_on_pickup": true},
-  {"id": "S99", "desc": "A curious lab token, probably worthless and thus interesting.", "essential_for_payoff": false, "mirror_on_pickup": false}
+  {
+    "id": "S05",
+    "desc": "A festival token with an etched constellation.",
+    "essential_for_payoff": false,
+    "mirror_on_pickup": true
+  },
+  {
+    "id": "S21",
+    "desc": "Festival gossip token — a social breadcrumb for romances.",
+    "essential_for_payoff": false,
+    "mirror_on_pickup": false
+  },
+  {
+    "id": "S22",
+    "desc": "A rusted cog bearing the company crest.",
+    "essential_for_payoff": true,
+    "mirror_on_pickup": true
+  },
+  {
+    "id": "S23",
+    "desc": "A shard of the Engine Heart's casing.",
+    "essential_for_payoff": true,
+    "mirror_on_pickup": true
+  },
+  {
+    "id": "S99",
+    "desc": "A curious lab token, probably worthless and thus interesting.",
+    "essential_for_payoff": false,
+    "mirror_on_pickup": false
+  }
 ]

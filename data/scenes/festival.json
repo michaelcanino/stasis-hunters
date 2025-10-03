@@ -17,9 +17,16 @@
     },
     {
       "id": "decline_charm",
-      "text": "Politely refuse — you have no need for such trinkets.",
+      "text": "Politely refuse the charm.",
       "effects": {
         "relationship": {"Hana": -1}
+      }
+    },
+    {
+      "id": "punchline",
+      "text": "Eavesdrop on gossip (danger: romance hit seed S21).",
+      "effects": {
+        "add_seed": "S21"
       }
     }
   ]

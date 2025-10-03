@@ -52,5 +52,18 @@
         "text": "The log describes an experiment that stalled at the moment of 'mirroring.'"
       }
     ]
+  },
+
+  {
+    "id": "finale_boss_scene",
+    "title": "Confront the Engine Heart",
+    "choices": [
+      {
+        "label": "Face the Engine Heart",
+        "action": "encounter_boss",
+        "boss_id": "ENGINE_HEART",
+        "goto": "post_boss_scene"
+      }
+    ]
   }
 ]

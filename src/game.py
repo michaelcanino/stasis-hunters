@@ -58,6 +58,17 @@ except Exception:
     MemoryCostManager = None
 
 try:
+    from .chapter_manager import ChapterManager
+except Exception:
+    ChapterManager = None
+
+try:
+    from .boss_fight import BossFight
+except Exception:
+    BossFight = None
+
+
+try:
     from .ui_helpers import paginate_lines as ui_paginate, choice_menu as ui_choice_menu
 except Exception:
     ui_paginate = None
@@ -89,7 +100,20 @@ def status_bar(player) -> str:
     name = getattr(player, "name", "Player")
     inv_count = len(getattr(player, "inventory", []))
     chron = len(getattr(player.chronicle, "entries", [])) if hasattr(player, "chronicle") else 0
-    return f"{BOLD}{name}{RESET}  |  Inv: {inv_count}  |  Chronicle: {chron}"
+
+    pieces = [f"{BOLD}{name}{RESET}", f"Inv: {inv_count}", f"Chronicle: {chron}"]
+
+    cs = getattr(player, "chronosense_uses_remaining", None)
+    if cs is not None:
+        pieces.append(f"Chronosense: {cs}")
+
+    tp = getattr(player, "tech_pulse", None)
+    if tp is not None:
+        tp_max = getattr(player, "tech_pulse_max", tp)
+        pieces.append(f"TechPulse: {tp}/{tp_max}")
+
+    return "  |  ".join(pieces)
+
 
 
 def heading(text: str):
@@ -212,6 +236,11 @@ class Game:
                 self.player = MinimalPlayer()
         else:
             self.player = MinimalPlayer()
+
+        # Chapter manager (Phase 3)
+        self.chapter_manager = ChapterManager(self.data_dir, player=self.player) if ChapterManager else None
+        # Optional boss helper
+        self.boss_fight_helper = BossFight if BossFight else None
 
         # ensure flags container exists
         if not hasattr(self.player, 'flags'):
@@ -391,16 +420,17 @@ class Game:
             toast("Nothing removable.", "Memory")
             return
         print("Enter comma-separated IDs to remove (or blank to cancel):")
-        ids = input('> ').strip()
-        if not ids:
-            toast("Canceled memory removal.", "Memory")
+        val = input("> ").strip()
+        if not val:
+            toast("Cancelled.", "Memory")
             return
-        remove_ids = [s.strip() for s in ids.split(',') if s.strip()]
-        if not confirm(f"Confirm removal of {len(remove_ids)} item(s)?", default=False):
-            toast("Removal canceled.", "Memory")
-            return
-        res = self.memory_manager.apply_removal(remove_ids)
-        toast(f"Removed: {res.get('removed')}  Blocked: {res.get('blocked')}", "Memory", wait=1.0)
+        ids = [s.strip() for s in val.split(",") if s.strip()]
+        result = self.memory_manager.apply_removal(ids)
+        if result.get("blocked"):
+            toast(f"Some items were protected and not removed: {', '.join(result['blocked'])}", "Memory")
+        else:
+            toast(f"Removed: {', '.join(result['removed'])}", "Memory")
+
 
     def check_payoffs(self):
         if not self.payoff_manager:

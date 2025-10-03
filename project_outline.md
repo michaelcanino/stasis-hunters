@@ -117,6 +117,26 @@ Each phase below includes deliverables, core classes/data, and scalability notes
 
 ---
 
+## Phase 3 — Content fill & QoL systems
+
+**Goal:** Implement full chapter flow, all seeds from the doc, mid-boss and penultimate fights, fallback enforcement, and the Chronosense/stamina system.
+
+**Deliverables**
+- Full `chapters.json` and `scenes/` for canonical chapters (1→13) based on the doc’s timeline and scene checklists. 
+- MidReliquary (S22) and Engine Heart (S23) boss implementations with drop mirroring and QA flags. 
+- Chronosense limited uses per chapter and Tech Pulse recharge mechanics.
+- UI indicator for protected Chronicle entries in the Memory Cost confirmation flow (console: list with `[PROTECTED]` tag). 
+
+**Core features to add**
+- `chapter_manager.py` (chapter state, per-chapter resets for chronosense uses)
+- `boss_fight.py` (special multi-phase sequence engine)
+- `ui_helpers.py` (console render helpers, paging, colored output)
+
+**QA & validation**
+- Implement the QA tests from the doc for each payoff (copyable checklist). The game must enforce fallback seed appearance and block payoffs until mirrored requirements met. 
+
+---
+
 ## Recommended OOP design (simple class overview + responsibilities)
 
 **Top-level**
