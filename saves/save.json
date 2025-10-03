@@ -1,0 +1,34 @@
+{
+  "player": {
+    "name": "Player",
+    "inventory": [
+      {
+        "id": "S05",
+        "desc": "A festival token with an etched constellation."
+      },
+      {
+        "id": "S22",
+        "desc": "A rusted cog bearing the company crest."
+      },
+      {
+        "id": "S23",
+        "desc": "A shard of the Engine Heart's casing."
+      }
+    ],
+    "relationships": {}
+  },
+  "chronicle_entries": [
+    {
+      "id": "S05",
+      "desc": "A festival token with an etched constellation."
+    },
+    {
+      "id": "S22",
+      "desc": "A rusted cog bearing the company crest."
+    },
+    {
+      "id": "S23",
+      "desc": "A shard of the Engine Heart's casing."
+    }
+  ]
+}
