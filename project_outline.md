@@ -92,6 +92,31 @@ Each phase below includes deliverables, core classes/data, and scalability notes
 
 ---
 
+## Phase 2 — Core systems & branching
+
+**Goal:** Add branching, payoffs, relationship system, memory-cost mechanic, and basic monsters/encounters.
+
+**Deliverables**
+- Relationship/confidant system (affinity ints). Romance flags and the multi-romance festival punishment behavior (S21) implemented. 
+- Memory Cost UI flow: preview list of optional fragments removed vs protected Chronicle entries. Implementation must block attempts to remove chronicle entries. 
+- Seed → Payoff tracker logic: payoffs blocked until required seeds mirrored.
+- Basic combat encounters (text: choices, enemy hp, simple phases). Introduce `Monster` class; drop seeds on kill (mirror to Chronicle if essential). 
+
+**Core classes**
+- `relationship.py` (manages affinities, romance flags)
+- `memory_cost.py` (logic to compute preview & apply costs)
+- `monster.py` (AI pattern stubs, drops)
+- `payoff_manager.py` (verifies seed prerequisites & triggers payoffs)
+
+**Data files**
+- `data/payoffs.json` (list of P01..P05 rules and required seeds)
+- `data/monsters.json` (M01, M_Wisps, M_MidReliquary) with drop tables + `mirror_on_pickup`. 
+
+**Scalability**
+- Make `payoff_manager` use declarative rules from JSON (list of seed IDs required, required mirror flags). This allows adding payoffs without code changes.
+
+---
+
 ## Recommended OOP design (simple class overview + responsibilities)
 
 **Top-level**
