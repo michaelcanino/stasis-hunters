@@ -1,0 +1,10 @@
+{
+  "id": "darkest_hour",
+  "chapter": 9,
+  "title": "Darkest Hour",
+  "text": ["The worst consequences of previous choices arrive."],
+  "choices": [
+    {"id": "stand_fast", "text": "Stand your ground"},
+    {"id": "run", "text": "Run and live to fight another day"}
+  ]
+}

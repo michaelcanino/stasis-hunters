@@ -1,0 +1,25 @@
+{
+  "id": "festival_punishment",
+  "chapter": 1,
+  "title": "Festival Gossip Punishment",
+  "text": [
+    "Whispers swell; someone misreported your role at the festival.",
+    "A public coolness settles — relationships shift."
+  ],
+  "choices": [
+    {
+      "id": "apologize",
+      "text": "Apologize and try to make amends.",
+      "effects": {
+        "relationship": {"Hana": 1}
+      }
+    },
+    {
+      "id": "deny",
+      "text": "Deny outright.",
+      "effects": {
+        "relationship": {"Hana": -1}
+      }
+    }
+  ]
+}

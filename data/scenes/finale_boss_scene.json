@@ -1,0 +1,13 @@
+{
+  "id": "finale_boss_scene",
+  "title": "Confrontation at the Core",
+  "description": "You stand before the Engine Heart.",
+  "choices": [
+    {
+      "label": "Fight!",
+      "action": "encounter_boss",
+      "boss_id": "ENGINE_HEART",
+      "goto": "post_boss_scene"
+    }
+  ]
+}

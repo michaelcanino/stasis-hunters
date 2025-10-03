@@ -1,0 +1,9 @@
+{
+  "id": "final_showdown",
+  "chapter": 11,
+  "title": "Final Showdown Approach",
+  "text": ["You approach the Engine Heart citadel. Tension mounts."],
+  "choices": [
+    {"id": "enter", "text": "Enter the citadel (prepare for boss fight)"}
+  ]
+}

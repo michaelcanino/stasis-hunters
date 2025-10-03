@@ -1,0 +1,9 @@
+{
+  "id": "complication_pressure",
+  "chapter": 6,
+  "title": "Complication / Pressure",
+  "text": ["Pressure increases. Friendships fray under stress."],
+  "choices": [
+    {"id": "confess", "text": "Make a personal confession", "effects": {"relationship": {"Hana": 2}}}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "first_containment",
+  "chapter": 3,
+  "title": "First Containment",
+  "text": ["A partially collapsed containment chamber. The air hums strangely."],
+  "choices": [
+    {"id": "search", "text": "Search the chamber (may reveal seeds)", "effects": {"add_seed": "S99"}}
+  ]
+}

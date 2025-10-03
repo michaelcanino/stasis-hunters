@@ -1,0 +1,9 @@
+{
+  "id": "escalation_scene",
+  "chapter": 8,
+  "title": "Escalation",
+  "text": ["Events escalate. The festival at the center returns as a motif."],
+  "choices": [
+    {"id": "prepare", "text": "Prepare for what's next", "effects": {"flag": {"prepared_for_engine": true}}}
+  ]
+}

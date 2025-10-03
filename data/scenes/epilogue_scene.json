@@ -1,0 +1,9 @@
+{
+  "id": "epilogue_scene",
+  "chapter": 13,
+  "title": "Epilogue",
+  "text": ["After the dust, you measure what you’ve saved and what you’ve lost."],
+  "choices": [
+    {"id": "reflect", "text": "Reflect on the journey"}
+  ]
+}

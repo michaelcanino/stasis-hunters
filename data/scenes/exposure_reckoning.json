@@ -1,0 +1,9 @@
+{
+  "id": "exposure_reckoning",
+  "chapter": 12,
+  "title": "Exposure & Reckoning",
+  "text": ["Media and legal fallout. The truth reshapes relationships and payoffs."],
+  "choices": [
+    {"id": "accept", "text": "Accept consequences"}
+  ]
+}

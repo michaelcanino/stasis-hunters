@@ -1,0 +1,10 @@
+{
+  "id": "sidequests_echoes",
+  "chapter": 4,
+  "title": "Sidequests & Echoes",
+  "text": ["You pick up small echoes of the broader conspiracy while doing local favors."],
+  "choices": [
+    {"id": "help_farmer", "text": "Help the farmer (gain affinity)"},
+    {"id": "explore_ruins", "text": "Explore ruins (chance to find lore)","effects": {"add_seed": "S99"}}
+  ]
+}

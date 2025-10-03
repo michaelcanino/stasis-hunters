@@ -1,0 +1,9 @@
+{
+  "id": "midpoint_reveal",
+  "chapter": 5,
+  "title": "Midpoint Reveal",
+  "text": ["A midplot revelation flips your understanding of the company behind the Engine Heart."],
+  "choices": [
+    {"id": "confront", "text": "Confront the official", "effects": {"flag": {"confronted_official": true}}}
+  ]
+}

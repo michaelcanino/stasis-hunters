@@ -1,0 +1,9 @@
+{
+  "id": "the_fall",
+  "chapter": 10,
+  "title": "The Fall",
+  "text": ["A major defeat — the city wavers under its own weight."],
+  "choices": [
+    {"id": "rally", "text": "Rally allies", "effects": {"relationship": {"Officer": 1}}}
+  ]
+}

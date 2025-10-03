@@ -1,0 +1,24 @@
+{
+  "id": "reliquary_cavern",
+  "chapter": 7,
+  "title": "Reliquary Cavern",
+  "text": [
+    "A dug-out reliquary. Deep within you sense a guarded artifact."
+  ],
+  "choices": [
+    {
+      "id": "search_chamber",
+      "text": "Search the chamber (may drop essential seed S22)",
+      "effects": {
+        "add_seed": "S22"
+      }
+    },
+    {
+      "id": "search_deeper",
+      "text": "Search deeper (rare chance to find Engine Heart fragment S23)",
+      "effects": {
+        "add_seed": "S23"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "investigation_recruitment",
+  "chapter": 2,
+  "title": "Investigation & Recruitment",
+  "text": ["You investigate the cliffside shrine and meet a charismatic officer."],
+  "choices": [
+    {"id": "question_locals", "text": "Question locals"},
+    {"id": "recruit", "text": "Recruit the officer to your crew", "effects": {"relationship": {"Officer": 1}}}
+  ]
+}

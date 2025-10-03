@@ -1,0 +1,12 @@
+{
+  "id": "chapter02_placeholder",
+  "title": "Chapter 2 — Placeholder Scene",
+  "description": "Placeholder scene for Chapter 2. Replace with content from jrpg_lore_seed_payoff_template.md.",
+  "choices": [
+    {
+      "label": "Continue",
+      "action": "text",
+      "text": "This is placeholder content. Replace with the scene script and choices."
+    }
+  ]
+}

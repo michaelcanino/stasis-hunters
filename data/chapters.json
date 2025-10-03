@@ -1,0 +1,15 @@
+[
+  {"id": "CH01", "title": "Chapter 1 — Festival Awakening", "scenes": ["festival_awaken", "festival_punishment"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH02", "title": "Chapter 2 — The Cliffside Shrine", "scenes": ["investigation_recruitment"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH03", "title": "Chapter 3 — Recruitment", "scenes": ["first_containment"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH04", "title": "Chapter 4 — Sidequests & Echoes", "scenes": ["sidequests_echoes"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH05", "title": "Chapter 5 — Midpoint Reveal", "scenes": ["midpoint_reveal"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH06", "title": "Chapter 6 — Complication / Pressure", "scenes": ["complication_pressure"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH07", "title": "Chapter 7 — The Reliquary", "scenes": ["reliquary_cavern"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH08", "title": "Chapter 8 — Escalation", "scenes": ["escalation_scene"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH09", "title": "Chapter 9 — Darkest Hour", "scenes": ["darkest_hour"], "chronosense_uses": 2, "tech_pulse_recharge": 1, "tech_pulse_max": 3},
+  {"id": "CH10", "title": "Chapter 10 — The Fall", "scenes": ["the_fall"], "chronosense_uses": 1, "tech_pulse_recharge": 1, "tech_pulse_max": 2},
+  {"id": "CH11", "title": "Chapter 11 — Final Showdown", "scenes": ["final_showdown", "finale_boss_scene"], "chronosense_uses": 1, "tech_pulse_recharge": 2, "tech_pulse_max": 2},
+  {"id": "CH12", "title": "Chapter 12 — Exposure & Reckoning", "scenes": ["exposure_reckoning"], "chronosense_uses": 1, "tech_pulse_recharge": 1, "tech_pulse_max": 2},
+  {"id": "CH13", "title": "Chapter 13 — Epilogue", "scenes": ["epilogue_scene"], "chronosense_uses": 0, "tech_pulse_recharge": 0, "tech_pulse_max": 1}
+]
